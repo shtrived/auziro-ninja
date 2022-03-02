@@ -8,6 +8,8 @@ import history from "./utils/history";
 import { getConfig } from "./config";
 
 const onRedirectCallback = (appState) => {
+  const target = appState.target;
+  console.log(`target url ... ${target}`);
   history.push(
     appState && appState.returnTo ? appState.returnTo : window.location.pathname
   );
@@ -24,6 +26,8 @@ const providerConfig = {
   redirectUri: window.location.origin,
   onRedirectCallback,
 };
+
+console.log(`window.location.origin .... ${window.location.origin}`);
 
 ReactDOM.render(
   <Auth0Provider {...providerConfig}>

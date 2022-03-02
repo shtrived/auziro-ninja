@@ -73,7 +73,7 @@ const NavBar = () => {
                     id="qsLoginBtn"
                     color="primary"
                     className="btn-margin"
-                    onClick={() => loginWithRedirect()}
+                    onClick={() => loginWithRedirect({ appState: { target: 'https://www.yahoo.com' }, custom_param: 'my custom param' } )}
                   >
                     Log in
                   </Button>
@@ -117,7 +117,7 @@ const NavBar = () => {
                     id="qsLoginBtn"
                     color="primary"
                     block
-                    onClick={() => loginWithRedirect({})}
+                    onClick={() => loginWithRedirect({ appState: { target: 'https://www.yahoo.com' }} )}
                   >
                     Log in
                   </Button>
